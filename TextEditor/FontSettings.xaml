@@ -1,0 +1,19 @@
+﻿<Window x:Class="TextEditor.FontSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextEditor"
+        mc:Ignorable="d"
+        Title="Font Settings" Height="189" Width="356" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="FontColorLabel" Content="Font color:" HorizontalAlignment="Left" Margin="18,18,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="FontFamilyLabel" Content="Font family:" HorizontalAlignment="Left" Margin="18,59,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="FontSizeLabel" Content="Font size:" HorizontalAlignment="Left" Margin="21,107,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="FontSizeValue" Content="0" HorizontalAlignment="Left" Height="23" Margin="103,110,0,0" VerticalAlignment="Top" Width="40" FontSize="10"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Height="20" Margin="136,113,0,0" VerticalAlignment="Top" Width="165" ValueChanged="slider_ValueChanged" Minimum="4" Maximum="72" Value="12"/>
+        <ComboBox Margin="136,61,55,70" Name="FontFamilyCMB" SelectionChanged="FontFamilyCMB_SelectionChanged"/>
+        <ComboBox Margin="136,14,55,114" Name="FontColorCMB" SelectionChanged="FontColorCMB_SelectionChanged"/>
+
+    </Grid>
+</Window>

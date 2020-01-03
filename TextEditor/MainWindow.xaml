@@ -1,0 +1,29 @@
+﻿<Window x:Class="TextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextEditor"
+        mc:Ignorable="d"
+        Title="Simple Text Editor " Height="450" Width="800" SizeChanged="Align_TextBox" Closing="Window_Closing">
+    <Grid>
+        <Menu x:Name="main_menu" HorizontalAlignment="Stretch" Height="18" VerticalAlignment="Top" MinWidth="780">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="NewFile_Click"/>
+                <MenuItem Header="_Open" Click="OpenFile_Click"/>
+                <MenuItem Header="_Save" Click="SaveFile_Click" Name="SaveBtn" IsEnabled="False"/>
+                <MenuItem Header="_Save as..." Click="SaveFileAs_Click" Name="SaveAsBtn" IsEnabled="False"/>
+                <MenuItem Header="_Exit" Click="ExitProgram_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Format">
+                <MenuItem Header="Text wrapping" IsCheckable="True" IsChecked="True" Click="TextWrapping_Click" Name="TextWrappingBtn"/>
+                <MenuItem Header="Font" Click="FontSettings_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Options">
+                <MenuItem Header="_Dark mode" IsCheckable="True" Click="DarkMode_Click" Name="DarkModeBtn"/>
+                <MenuItem Header="About" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBox" HorizontalAlignment="Stretch" MinHeight="396" Margin="0,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" AcceptsReturn="True"/>
+    </Grid>
+</Window>
